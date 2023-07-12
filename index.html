@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script> -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <title>INVENTORIO APP</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header x-data="{ open: false }" class="header">
+      <!-- Logo -->
+      <div class="header__logo">
+        <img src="./assets/4.svg" alt="" />
+      </div>
+      <!-- Boton abrir -->
+      <button class="header__button-nav--open" x-on:click="open = true">
+        Abrir
+      </button>
+      <!-- Navegador -->
+      <nav class="nav" x-bind:class="open ? 'nav--show' : ''">
+        <!-- Boton cerrar -->
+        <div class="nav__button" x-on:click="open = false">
+          <button class="header__button-nav--close">Cerrar</button>
+        </div>
+        <!-- Menu -->
+        <ul class="nav__ul">
+          <li class="nav__item">
+            <a href="#about" class="nav__link">Sobre Inventorio</a>
+          </li>
+          <li class="nav__item">
+            <a href="#features" class="nav__link">Funcionalidades</a>
+          </li>
+          <!-- <li class="nav__item"><a href="#faq" class="nav__link">FAQ</a></li> -->
+          <li class="nav__item">
+            <a href="#plan" class="nav__link">Planes</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Fin Navegador -->
+    </header>
+
+    <main class="main__container">
+      <section class="section__title">
+          <h1>Optimiza la gestión de stock y equipo</h1>
+        <img src="./assets/ftinventorioapp.svg" alt="" />
+      </section>
+      <section class="section__title" id="features">
+        <div class="cards">
+          <article  class="information [ card ]">
+            <span class="tag">Feature</span>
+            <h2 class="title">Control exhaustivo del inventario</h2>
+            <p class="info">
+              Inventorio permitirá realizar un seguimiento detallado de sus
+              existencias, conocer las cantidades disponibles en todo momento y
+              recibir alertas automáticas cuando los niveles de stock sean
+              bajos.
+            </p>
+            <button class="button">
+              <span><a
+                class="whatsapp-button-card"
+                href="https://wa.me/34607406127"
+                target="_blank"
+              >
+                Contactar
+              </a></span>
+              
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 0 24 24"
+                width="24px"
+                fill="none"
+              >
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path
+                  d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </article>
+          <article class="information [ card ]">
+            <span class="tag">Feature</span>
+            <h2 class="title">Optimización de la reposición</h2>
+            <p class="info">
+              Nuestro sistema analizará los patrones de demanda y ofrecerá
+              sugerencias para optimizar las decisiones de reabastecimiento,
+              evitando tanto la escasez como el exceso de inventario y
+              maximizando así sus ventas.
+            </p>
+            <button class="button">
+                <span><a
+                    class="whatsapp-button-card"
+                    href="https://wa.me/34607406127"
+                    target="_blank"
+                  >
+                    Contáctar
+                  </a></span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 0 24 24"
+                width="24px"
+                fill="none"
+              >
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path
+                  d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </article>
+          <article class="information [ card ]">
+            <span class="tag">Feature</span>
+            <h2 class="title">Integración con proveedores</h2>
+            <p class="info">
+              Inventorio facilitará la gestión de proveedores, permitiendo una
+              comunicación fluida y automatizada para realizar pedidos,
+              gestionar entregas y actualizar información en tiempo real
+            </p>
+            <button class="button">
+                <span><a
+                    class="whatsapp-button-card"
+                    href="https://wa.me/34607406127"
+                    target="_blank"
+                  >
+                    Contáctar
+                  </a></span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 0 24 24"
+                width="24px"
+                fill="none"
+              >
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path
+                  d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </article>
+          <article class="information [ card ]">
+            <span class="tag">Feature</span>
+            <h2 class="title">Análisis y reportes</h2>
+            <p class="info">
+              Obtendrán informes detallados y análisis inteligentes que les
+              brindarán una visión clara de su rendimiento, tendencias de ventas
+              y oportunidades de mejora en la gestión del inventario
+            </p>
+            <button class="button">
+                <span><a
+                    class="whatsapp-button-card"
+                    href="https://wa.me/34607406127"
+                    target="_blank"
+                  >
+                    Contáctar
+                  </a></span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 0 24 24"
+                width="24px"
+                fill="none"
+              >
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path
+                  d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </article>
+          <article class="information [ card ]">
+            <span class="tag">Feature</span>
+            <h2 class="title">Ficha de Empleados</h2>
+            <p class="info">
+              Podras gestionar empleados, hora de entrada, pausa y salida ,
+              Además de obtener excel con esta información para tomar desiciones
+              de efectividad .
+            </p>
+            <button class="button">
+                <span><a
+                    class="whatsapp-button-card"
+                    href="https://wa.me/34607406127"
+                    target="_blank"
+                  >
+                    Contáctar
+                  </a></span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 0 24 24"
+                width="24px"
+                fill="none"
+              >
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path
+                  d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </article>
+          <article class="information [ card ]">
+            <span class="tag">Feature</span>
+            <h2 class="title">Never miss your important meetings</h2>
+            <p class="info">
+              Elemenatary tracks all the events for the day as you scheduled and
+              you will never have to worry.
+            </p>
+            <button class="button">
+                <span><a
+                    class="whatsapp-button-card"
+                    href="https://wa.me/34607406127"
+                    target="_blank"
+                  >
+                    Contáctar
+                  </a></span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 0 24 24"
+                width="24px"
+                fill="none"
+              >
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path
+                  d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </article>
+        </div>
+      </section>
+      <section class="section__title" id="about">
+        <div  class="cards-extra">
+          <article class="information [ card-extra ]">
+            <h2 class="title">
+              La única app que necesitas para optimizar y organizar tu empresa
+              en el día a dia
+            </h2>
+            <p class="info">
+              Inventorio simplificará sus operaciones diarias,
+              traerá una serie de beneficios significativos para su negocio:
+            </p>
+            <dl class="details">
+              <div>
+                <dt>Reducción de costos</dt>
+                <dd>
+                  Al evitar la falta de stock y el exceso de inventario, podrán
+                  optimizar sus compras y minimizar los costos asociados con la
+                  gestión del inventario
+                </dd>
+              </div>
+              <div>
+                <dt>Mejora de la eficiencia</dt>
+                <dd>
+                  Con una gestión más precisa y automatizada del inventario,
+                  podrán ahorrar tiempo en tareas manuales y dedicarlo a
+                  actividades estratégicas que impulsen el crecimiento de su
+                  negocio.
+                </dd>
+              </div>
+              <div>
+                <dt>Mejor satisfacción del cliente.</dt>
+                <dd>
+                  Al tener un control óptimo del inventario, podrán asegurar un
+                  suministro constante de productos, evitar retrasos en las
+                  entregas y garantizar la satisfacción de sus clientes
+                </dd>
+              </div>
+              <div>
+                <dt>Toma de decisiones informada</dt>
+                <dd>
+                  Los informes y análisis en tiempo real les proporcionarán
+                  información valiosa para tomar decisiones más acertadas,
+                  identificar oportunidades de crecimiento y anticiparse a las
+                  demandas del mercado
+                </dd>
+              </div>
+              <div>
+                <dt>Mejor satisfacción de empleador</dt>
+                <dd>
+                  Al tener una interfaz intuitiva, garantiza la satisfacción de
+                  sus empleados.
+                </dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+      </section>
+      <section class="section__title">
+        <h2 class="h2">Ahorra horas y esfuerzo de la mano de INVENTORIO</h2>
+        <img src="./assets/ftinventorioapp.svg" alt="" />
+      </section>
+      <section class="section__title" id="plan">
+        <div class="cards">
+          <article class="plan [ card ]">
+            <div class="inner">
+              <span class="pricing">
+                <span> 45€<small>/ m</small> </span>
+              </span>
+              <h2 class="title">Araguaney</h2>
+              <p class="info">
+                Este plan te permite de forma sencilla gestionar tu equipo e
+                inventario.
+              </p>
+              <ul class="features">
+                <li>
+                  <span class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  <span><strong>1</strong> miembro de equipo</span>
+                </li>
+                <li>
+                  <span class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  <span>Control horario<strong> 3 miembros</strong> </span>
+                </li>
+                <li>
+                  <span class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  <span>Control exhaustivo de <strong>stock</strong></span>
+                </li>
+                <li>
+                  <span class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  <span>Descargar Excel , pdf e informes </span>
+                </li>
+              </ul>
+              <button class="button"><span><a
+                class="whatsapp-button-card"
+                href="https://wa.me/34607406127"
+                target="_blank"
+              >
+                Elegir Plan
+              </a></span></button>
+            </div>
+          </article>
+          <article class="plan [ card ]">
+            <div class="inner">
+              <span class="pricing">
+                <span> 55€ <small>/ m</small> </span>
+              </span>
+              <h2 class="title">Sakura</h2>
+              <p class="info">
+                Este plan te permite de forma sencilla gestionar tu equipo e
+                inventario incluye los servicios del plan básico y se adapta a el crecimiento de tu empresa.
+              </p>
+              <ul class="features">
+                <li>
+                  <span class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  <span><strong>3</strong> miembros de equipo</span>
+                </li>
+                <li>
+                  <span class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  <span>Control horario<strong> 7 miembros</strong> </span>
+                </li>
+                <li>
+                  <span class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  <span>Control exhaustivo de <strong>stock</strong></span>
+                </li>
+                <li>
+                  <span class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  <span>Descargar Excel , pdf e informes </span>
+                </li>
+              </ul>
+              <button class="button"><span><a
+                class="whatsapp-button-card"
+                href="https://wa.me/34607406127"
+                target="_blank"
+              >
+                Elegir Plan
+              </a></span></button>
+            </div>
+          </article>
+          <article class="plan [ card ]">
+            <div class="inner">
+              <span class="pricing">
+                <span> 120€ <small>/ m</small> </span>
+              </span>
+              <h2 class="title">Roble</h2>
+              <p class="info">
+                Este plan te permite de forma sencilla gestionar tu equipo e
+                inventario. E incluye soporte premium, y servicios de consultoria.
+              </p>
+              <ul class="features">
+                <li>
+                  <span class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  <span><strong>Hasta 8</strong> miembros de equipo</span>
+                </li>
+                <li>
+                  <span class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  <span>Control horario<strong> +15 miembros</strong> </span>
+                </li>
+                <li>
+                  <span class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  <span>Control exhaustivo de <strong>stock</strong></span>
+                </li>
+                <li>
+                  <span class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  <span>Descargar Excel , pdf e informes </span>
+                </li>
+              </ul>
+              <button class="button"><span><a
+                class="whatsapp-button-card"
+                href="https://wa.me/34607406127"
+                target="_blank"
+              >
+                Elegir Plan
+              </a></span></button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <!-- Fin Main -->
+    
+    <a
+    class="whatsapp-button"
+    href="https://wa.me/34607406127"
+    target="_blank"
+  >
+    <img src="./assets/whatsapp.png" alt="WhatsApp Icon" />
+    Contáctanos por WhatsApp
+  </a>
+
+  
+  <footer>
+    <div class="footer-container">
+      <p>Inventorio.app - Todos los derechos reservados</p>
+      <p>&copy; 2023</p>
+    
+    </div>
+  </footer>
+
+
+<script src="index.js"></script>
+  </body>
+</html>
